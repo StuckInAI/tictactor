@@ -1,45 +1,42 @@
 # Tictactor
 
-A full-stack tic-tac-toe game application.
+A simple, interactive tic-tac-toe game built with Next.js.
 
 ## Features
 
-- Two game modes: Human vs. Human and Human vs. Computer.
-- Real-time game state management.
-- Responsive UI built with React and TypeScript.
-- RESTful API backend with Node.js and Express.
-
-## Prerequisites
-
-- Docker and Docker Compose installed.
+- Play against another human or computer with adjustable difficulty (easy, medium, hard).
+- Real-time win detection and draw detection.
+- Score tracking with persistent storage using localStorage.
+- Responsive design for mobile and desktop.
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js and npm installed.
+
+### Installation
+
 1. Clone the repository.
-2. Navigate to the project directory.
-3. Run `docker-compose up --build` to start the application.
-4. Open your browser and go to `http://localhost:3000` to play the game.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the development server.
 
-## Project Structure
+### Deployment with Docker
 
-- `client/`: Frontend React application.
-- `server/`: Backend Express server.
-- `docker-compose.yml`: Docker Compose configuration.
+1. Build the Docker image: `docker build -t tictactor .`
+2. Run the container: `docker run -p 3000:80 tictactor`
 
-## Environment Variables
+Or use docker-compose: `docker-compose up`
 
-- Server: `PORT` (default: 5000)
+## Game Modes
 
-## API Endpoints
+- **Human vs Human**: Two players take turns on the same device.
+- **Human vs Computer**: Play against the computer with selectable difficulty.
 
-- POST /api/game: Start a new game.
-- PUT /api/game/move: Make a move.
-- GET /api/game/status: Get current game status.
+## Scoring
 
-## Development
-
-To run in development mode, refer to the individual README files in client and server directories.
+Scores are saved in the browser's local storage and persist across sessions.
 
 ## License
 
-MIT
+This project is open source and available under the MIT License.
