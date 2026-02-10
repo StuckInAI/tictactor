@@ -3,7 +3,6 @@ import Board from '../components/Board';
 import GameModeSelector from '../components/GameModeSelector';
 import ScoreBoard from '../components/ScoreBoard';
 import { calculateWinner, getComputerMove } from '../utils/gameLogic';
-import '../styles/globals.css';
 
 export default function Home() {
   const [board, setBoard] = useState(Array(9).fill(null));
