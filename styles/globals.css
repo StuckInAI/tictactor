@@ -30,7 +30,6 @@ body {
   width: 100px;
   height: 100px;
   font-size: 2em;
-  background-color: #fff;
   border: 2px solid #333;
   cursor: pointer;
   display: flex;
